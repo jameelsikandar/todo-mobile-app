@@ -1,50 +1,184 @@
-# Welcome to your Expo app 👋
+# React Native Todo App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern cross-platform Todo application built with React Native and powered by Convex as the backend. The app allows users to efficiently manage their daily tasks with real-time synchronization and a clean, responsive user interface.
 
-## Get started
+## Features
 
-1. Install dependencies
+- User authentication
+- Create new tasks
+- Edit existing tasks
+- Delete tasks
+- Mark tasks as completed
+- Real-time data synchronization
+- Responsive and clean mobile UI
+- Persistent cloud storage with Convex
+- Cross-platform support (Android & iOS)
 
-   ```bash
-   npm install
-   ```
+## Tech Stack
 
-2. Start the app
+### Frontend
 
-   ```bash
-   npx expo start
-   ```
+- React Native
+- TypeScript
+- Expo
+- React Navigation
 
-In the output, you'll find options to open the app in a
+### Backend
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Convex
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Project Structure
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+.
+├── app/
+├── components/
+├── hooks/
+├── assets/
+├── convex/
+├── constants/
+├── types/
+├── utils/
+└── package.json
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Getting Started
 
-## Learn more
+### Prerequisites
 
-To learn more about developing your project with Expo, look at the following resources:
+Make sure you have installed:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- Node.js (v18 or later)
+- npm or yarn
+- Expo CLI
+- Expo Go (for testing on a physical device)
+- A Convex account
 
-## Join the community
+## Installation
 
-Join our community of developers creating universal apps.
+Clone the repository.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+git clone https://github.com/jameelsikandar/todo-mobile-app.git
+```
+
+Navigate to the project directory.
+
+```bash
+cd todo-mobile-app
+```
+
+Install dependencies.
+
+```bash
+npm install
+```
+
+or
+
+```bash
+yarn
+```
+
+## Environment Variables
+
+Create a `.env` file in the root directory and add your Convex deployment URL.
+
+```env
+EXPO_PUBLIC_CONVEX_URL=your_convex_deployment_url
+```
+
+## Running the App
+
+Start the development server.
+
+```bash
+npx expo start
+```
+
+Then choose one of the following options:
+
+- Press **a** to run on Android Emulator
+- Press **i** to run on iOS Simulator (macOS only)
+- Scan the QR code using Expo Go on your mobile device
+
+## Backend Setup
+
+Create a Convex project.
+
+Install the Convex CLI if needed.
+
+```bash
+npm install -g convex
+```
+
+Login to Convex.
+
+```bash
+npx convex login
+```
+
+Initialize Convex.
+
+```bash
+npx convex dev
+```
+
+Deploy your backend when ready.
+
+```bash
+npx convex deploy
+```
+
+## Screenshots
+
+Add screenshots of your application here.
+
+```
+screenshots/
+├── home.png
+├── add-task.png
+├── completed.png
+└── profile.png
+```
+
+## Future Improvements
+
+- Task categories
+- Due dates
+- Task reminders
+- Push notifications
+- Dark mode
+- Search and filtering
+- Offline support
+- Task priority levels
+
+## Learning Outcomes
+
+This project helped me gain practical experience with:
+
+- React Native development
+- TypeScript
+- Expo
+- Convex backend
+- Real-time database synchronization
+- Mobile UI development
+- State management
+- API integration
+- Component-based architecture
+
+## Author
+
+**Jameel Sikandar**
+
+Computer Science Student | MERN Stack & React Native Developer
+
+GitHub: https://github.com/jameelsikandar
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+If you found this project useful, consider giving it a star.
