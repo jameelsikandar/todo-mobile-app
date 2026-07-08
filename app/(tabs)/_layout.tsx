@@ -1,10 +1,10 @@
-import { useTheme } from "@/hooks/useTheme";
+import { useThemeStore } from "@/hooks/useThemeStore";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import React from "react";
 
 const TabsLayout = () => {
-  const { colors } = useTheme();
+  const { colors } = useThemeStore();
   return (
     <Tabs
       screenOptions={{

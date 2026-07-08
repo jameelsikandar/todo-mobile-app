@@ -1,10 +1,10 @@
 import { createHomeStyles } from "@/assets/styles/home.styles";
-import { useTheme } from "@/hooks/useTheme";
+import { useThemeStore } from "@/hooks/useThemeStore";
 import { LinearGradient } from "expo-linear-gradient";
 import { ActivityIndicator, Text, View } from "react-native";
 
 const LoadingSpinner = () => {
-  const { colors } = useTheme();
+  const { colors } = useThemeStore();
 
   const homeStyles = createHomeStyles(colors);
 

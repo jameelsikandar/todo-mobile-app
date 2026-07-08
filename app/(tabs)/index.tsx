@@ -5,7 +5,7 @@ import LoadingSpinner from "@/components/LoadingSpinner";
 import TodoInput from "@/components/TodoInput";
 import { api } from "@/convex/_generated/api";
 import { Doc, Id } from "@/convex/_generated/dataModel";
-import { useTheme } from "@/hooks/useTheme";
+import { useThemeStore } from "@/hooks/useThemeStore";
 import { Ionicons } from "@expo/vector-icons";
 import { useMutation, useQuery } from "convex/react";
 import { LinearGradient } from "expo-linear-gradient";
@@ -24,7 +24,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 type Todo = Doc<"todos">;
 
 export default function Index() {
-  const { colors } = useTheme();
+  const { colors } = useThemeStore();
 
   const [editingId, setEditingId] = useState<Id<"todos"> | null>(null);
   const [editText, setEditText] = useState("");

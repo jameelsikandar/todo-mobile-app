@@ -1,5 +1,5 @@
 import { createSettingsStyles } from "@/assets/styles/settings.styles";
-import { useTheme } from "@/hooks/useTheme";
+import { useThemeStore } from "@/hooks/useThemeStore";
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import React, { useState } from "react";
@@ -9,7 +9,7 @@ const Preferences = () => {
   const [isAutoSync, setIsAutoSync] = useState(true);
   const [isNotificationEnabled, setIsNotificationEnabled] = useState(true);
 
-  const { colors, isDarkMode, toggleDarkMode } = useTheme();
+  const { colors, isDarkMode, toggleDarkMode } = useThemeStore();
 
   const settingStyles = createSettingsStyles(colors);
 

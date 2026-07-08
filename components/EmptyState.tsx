@@ -1,11 +1,11 @@
 import { createHomeStyles } from "@/assets/styles/home.styles";
-import { useTheme } from "@/hooks/useTheme";
+import { useThemeStore } from "@/hooks/useThemeStore";
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { Text, View } from "react-native";
 
 const EmptyState = () => {
-  const { colors } = useTheme();
+  const { colors } = useThemeStore();
 
   const homeStyles = createHomeStyles(colors);
 

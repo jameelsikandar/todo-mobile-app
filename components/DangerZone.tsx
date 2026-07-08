@@ -1,6 +1,6 @@
 import { createSettingsStyles } from "@/assets/styles/settings.styles";
 import { api } from "@/convex/_generated/api";
-import { useTheme } from "@/hooks/useTheme";
+import { useThemeStore } from "@/hooks/useThemeStore";
 import { Ionicons } from "@expo/vector-icons";
 import { useMutation } from "convex/react";
 import { LinearGradient } from "expo-linear-gradient";
@@ -8,7 +8,7 @@ import React from "react";
 import { Alert, Text, TouchableOpacity, View } from "react-native";
 
 const DangerZone = () => {
-  const { colors } = useTheme();
+  const { colors } = useThemeStore();
 
   const settingStyles = createSettingsStyles(colors);
 
